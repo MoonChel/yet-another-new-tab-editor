@@ -12,7 +12,7 @@ const vuexLocal = new VuexPersistence({
 export default new Vuex.Store({
   plugins: [vuexLocal.plugin],
   state: {
-    currentDocument: null,
+    currentDocumentId: null,
     documents: []
   },
   mutations: {
@@ -22,10 +22,10 @@ export default new Vuex.Store({
 
       console.log("document updated", document);
     },
-    setCurrentDocument(state, document) {
-      state.currentDocument = document;
+    setCurrentDocumentId(state, documentId) {
+      state.currentDocumentId = documentId;
 
-      console.log("selected new current document", document);
+      console.log("selected new current document", documentId);
     },
     addNewDocument(state) {
       let newDocument = {
@@ -35,7 +35,7 @@ export default new Vuex.Store({
       };
 
       state.documents.push(newDocument);
-      state.currentDocument = newDocument;
+      state.currentDocumentId = newDocument.id;
 
       console.log("new document added");
     },
@@ -55,9 +55,9 @@ export default new Vuex.Store({
   getters: {
     documents: state => state.documents,
     currentDocument: state => {
-      console.log("current document", state.currentDocument);
+      console.log("current document", state.currentDocumentId);
 
-      return state.currentDocument;
+      return state.documents.find(d => d.id === state.currentDocumentId);
     }
   }
 });

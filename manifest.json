@@ -1,7 +1,7 @@
 {
   "name": "Yet another new tab editor",
   "description": "Tab editor based on vuejs, vuex persist and tiptap",
-  "version": "0.7",
+  "version": "0.8",
   "manifest_version": 2,
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "chrome_url_overrides": {
@@ -10,6 +10,7 @@
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
+    "32": "icons/icon64.png",
     "128": "icons/icon128.png"
   }
 }

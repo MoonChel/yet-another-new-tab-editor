@@ -4,7 +4,7 @@
       <span
         class="button clear"
         :contenteditable="true"
-        @click.prevent="setCurrentDocument(document)"
+        @click.prevent="setCurrentDocumentId(document.id)"
         @blur="updateDocumentName"
         @input="checkNameLength"
       >
@@ -47,7 +47,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations(["removeDocument", "setCurrentDocument", "updateDocument"]),
+    ...mapMutations(["removeDocument", "setCurrentDocumentId", "updateDocument"]),
     checkNameLength() {
       if (event.target.innerText.length > 20) {
         alert("Document name is too long...");

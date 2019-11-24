@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="container">
-    <div class="row" style="padding-top: 20pt;">
+    <div class="row" style="padding-top: 10pt;">
       <div class="col-3 right-border">
         <h4>
           <span style="padding-right: 10px">Documents</span>
@@ -15,7 +15,14 @@
       </div>
 
       <div class="col-8">
-        <my-editor :document="currentDocument" @onUpdate="onDocumentUpdate"></my-editor>
+        <template v-if="documents.length === 0">
+          <h1 class="text-light is-marginless my-link" @click.prevent="addNewDocument">
+            Click to add a new document
+          </h1>
+        </template>
+        <template v-else>
+          <my-editor :document="currentDocument" @onUpdate="onDocumentUpdate"></my-editor>
+        </template>
       </div>
     </div>
   </div>
