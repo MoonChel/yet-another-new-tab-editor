@@ -6,7 +6,7 @@ build:
 	yarn build
 
 zip:
-	zip app.zip dist/*
+	zip -r app.zip dist/*
 
 clean:
 	rm -fr dist app.zip
