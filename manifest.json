@@ -1,6 +1,6 @@
 {
   "name": "Yet another new tab editor",
-  "description": "New tab editor based on vuejs, vuex persist and tiptap",
+  "description": "Tab editor based on vuejs, vuex persist and tiptap",
   "version": "0.7",
   "manifest_version": 2,
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
