@@ -6,7 +6,7 @@ https://chrome.google.com/webstore/detail/yet-another-new-tab-edito/fehhbbgjdcpf
 
 ## Features:
 
-- markdown support
+- markdown support + *live* preview
 - persistent support, everything is saved to local-storage
 
 ## Project setup
